@@ -2612,15 +2612,23 @@ if (transitionButton) {
           "templateParameters": [
             {
               "q_id": "a1",
-              "q_text": "予告編を見て、どれくらい映画本編を鑑賞したいと思いましたか？"
+              "q_text": "この予告編を見て、映画本編をぜひ鑑賞したいと思った。"
             },
             {
               "q_id": "a2",
-              "q_text": "予告編を見て、どれくらい映画本編のストーリーを想定することができたと思いましたか？"
+              "q_text": "この予告編から、映画本編のストーリー展開を容易に想像できた。"
             },
             {
               "q_id": "a3",
-              "q_text": "視聴した予告編は、映画本編の内容のネタバレになっていると感じましたか？"
+              "q_text": "視聴した予告編は、映画本編のネタバレになっていると感じた。"
+            },
+            {
+              "q_id": "a4",
+              "q_text": "この予告編には、刺激的でインパクトのある描写が多いと感じた。"
+            },
+            {
+              "q_id": "a5",
+              "q_text": "この予告編は、映像作品として非常に魅力的だった。"
             }
           ],
           "sample": {
@@ -2639,13 +2647,13 @@ if (transitionButton) {
             "items": [
               {
                 "type": "text",
-                "title": "1本目の映像について、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。",
-                "content": ""
+                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E1本目の映像について、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
               },
               {
                 "required": true,
                 "type": "radio",
-                "label": "${parameters.q_text}",
+                "label": "\u003Cdiv style=\"font-size: 1.4rem; color: #111111; font-weight: bold;\"\u003E   ${parameters.q_text} \u003C\u002Fdiv\u003E",
                 "options": [
                   {
                     "label": "1. まったくそう思わない",
@@ -2694,15 +2702,23 @@ if (transitionButton) {
           "templateParameters": [
             {
               "q_id": "b1",
-              "q_text": "予告編を見て、どれくらい映画本編を鑑賞したいと思いましたか？"
+              "q_text": "この予告編を見て、映画本編をぜひ鑑賞したいと思った。"
             },
             {
               "q_id": "b2",
-              "q_text": "予告編を見て、どれくらい映画本編のストーリーを想定することができたと思いましたか？"
+              "q_text": "この予告編から、映画本編のストーリー展開を容易に想像できた。"
             },
             {
               "q_id": "b3",
-              "q_text": "視聴した予告編は、映画本編の内容のネタバレになっていると感じましたか？"
+              "q_text": "視聴した予告編は、映画本編のネタバレになっていると感じた。"
+            },
+            {
+              "q_id": "b4",
+              "q_text": "この予告編には、刺激的でインパクトのある描写が多いと感じた。"
+            },
+            {
+              "q_id": "b5",
+              "q_text": "この予告編は、映像作品として非常に魅力的だった。"
             }
           ],
           "sample": {
@@ -2721,13 +2737,13 @@ if (transitionButton) {
             "items": [
               {
                 "type": "text",
-                "title": "2本目の映像について、\u003Cbr\u003E質問文を読んでいただき、あなたにもっとも当てはまると思う選択肢を選んで回答してください。",
-                "content": ""
+                "title": "2本目の映像\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E2本目の映像について、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003Eについて、\u003Cbr\u003E質問文を読んでいただき、あなたにもっとも当てはまると思う選択肢を選んで回答してください。",
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
               },
               {
                 "required": true,
                 "type": "radio",
-                "label": "${parameters.q_text}",
+                "label": "\u003Cdiv style=\"font-size: 1.4rem; color: #111111; font-weight: bold;\"\u003E   ${parameters.q_text} \u003C\u002Fdiv\u003E",
                 "options": [
                   {
                     "label": "1. まったくそう思わない",
@@ -2776,15 +2792,23 @@ if (transitionButton) {
           "templateParameters": [
             {
               "q_id": "c1",
-              "q_text": "予告編を見て、どれくらい映画本編を鑑賞したいと思いましたか？"
+              "q_text": "この予告編を見て、映画本編をぜひ鑑賞したいと思った。"
             },
             {
               "q_id": "c2",
-              "q_text": "予告編を見て、どれくらい映画本編のストーリーを想定することができたと思いましたか？"
+              "q_text": "この予告編から、映画本編のストーリー展開を容易に想像できた。"
             },
             {
               "q_id": "c3",
-              "q_text": "視聴した予告編は、映画本編の内容のネタバレになっていると感じましたか？"
+              "q_text": "視聴した予告編は、映画本編のネタバレになっていると感じた。"
+            },
+            {
+              "q_id": "c4",
+              "q_text": "この予告編には、刺激的でインパクトのある描写が多いと感じた。"
+            },
+            {
+              "q_id": "c5",
+              "q_text": "この予告編は、映像作品として非常に魅力的だった。"
             }
           ],
           "sample": {
@@ -2803,12 +2827,13 @@ if (transitionButton) {
             "items": [
               {
                 "type": "text",
-                "title": "3本目の映像について、\u003Cbr\u003E以下の質問文を読んでいただき、あなたにもっとも当てはまると思う選択肢を選んで回答してください。"
+                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E3本目の映像について、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
               },
               {
                 "required": true,
                 "type": "radio",
-                "label": "${parameters.q_text}",
+                "label": "\u003Cdiv style=\"font-size: 1.4rem; color: #111111; font-weight: bold;\"\u003E   ${parameters.q_text} \u003C\u002Fdiv\u003E",
                 "options": [
                   {
                     "label": "1. まったく当てはまらない",
@@ -2857,15 +2882,15 @@ if (transitionButton) {
           "templateParameters": [
             {
               "q_id": "d1",
-              "q_text": "映画は映画館で観るべきものだと思いますか？"
+              "q_text": "映画は、映画館で観るべきだ。"
             },
             {
               "q_id": "d2",
-              "q_text": "映画はエンドロールまで見るべきだと思いますか？"
+              "q_text": "映画は、エンドロールの最後まで見るべきだ。"
             },
             {
               "q_id": "d3",
-              "q_text": "映画業界の未来は明るいと思いますか？"
+              "q_text": "映画業界の未来は明るいと思う。"
             }
           ],
           "sample": {
@@ -2884,12 +2909,13 @@ if (transitionButton) {
             "items": [
               {
                 "type": "text",
-                "title": "以下の質問文を読んでいただき、あなたにもっとも当てはまると思う選択肢を選んで回答してください。"
+                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
               },
               {
                 "required": true,
                 "type": "radio",
-                "label": "${parameters.q_text}",
+                "label": "\u003Cdiv style=\"font-size: 1.4rem; color: #111111; font-weight: bold;\"\u003E   ${parameters.q_text} \u003C\u002Fdiv\u003E",
                 "options": [
                   {
                     "label": "1. まったく当てはまらない",
@@ -2912,11 +2938,11 @@ if (transitionButton) {
                     "coding": "5"
                   }
                 ],
-                "name": "dollarparameters.q_text"
+                "name": "lessdiv-style\"font-size:-1.4rem-color:-111111-font-weight:-bold\"greater-dollarparameters.q_text-lessdivgreater"
               }
             ],
             "scrollTop": true,
-            "submitButtonText": "Continue →",
+            "submitButtonText": "次へ →",
             "submitButtonPosition": "right",
             "files": {},
             "responses": {
