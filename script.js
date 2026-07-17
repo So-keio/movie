@@ -2417,7 +2417,7 @@ if (video && nextButton) {
                   {
                     "required": true,
                     "type": "html",
-                    "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: \u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 250px;\"\u003E\r\n \u003Ch3 style=\"font-size: 2.0rem; margin-bottom: 35px; text-align: center;\"\u003E\r\n   ${parameters.q_text}\r\n \u003C\u002Fh3\u003E\r\n\r\n \u003Cdiv id=\"choice-area\" style=\"display: flex; justify-content: center; gap: 120px; margin-bottom: 40px;\"\u003E\r\n  \r\n   \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer; font-size: 2rem;\"\u003E\r\n     \u003Cspan style=\"margin-bottom: 5px;\"\u003E⭕️\u003C\u002Fspan\u003E\r\n     \u003Cinput type=\"radio\" name=\"response\" value=\"yes\" style=\"transform: scale(1.5);\"\u003E\r\n   \u003C\u002Flabel\u003E\r\n\r\n   \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer; font-size: 2rem;\"\u003E\r\n     \u003Cspan style=\"margin-bottom: 5px;\"\u003E❌️\u003C\u002Fspan\u003E\r\n     \u003Cinput type=\"radio\" name=\"response\" value=\"no\" style=\"transform: scale(1.5);\"\u003E\r\n   \u003C\u002Flabel\u003E\r\n\r\n \u003C\u002Fdiv\u003E\r\n\u003C\u002Fdiv\u003Ecenter; width: 100%; min-height: 250px;\"\u003E\r\n \u003Ch3 style=\"font-size: 2.0rem; margin-bottom: 35px; text-align: center;\"\u003E\r\n   ${parameters.q_text}\r\n \u003C\u002Fh3\u003E\r\n\r\n\r\n \u003Cdiv id=\"choice-area\" style=\"display: flex; justify-content: center; gap: 120px; margin-bottom: 40px;\"\u003E\r\n  \r\n   \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer; font-size: 2rem;\"\u003E\r\n     \u003Cspan style=\"margin-bottom: 5px;\"\u003E⭕️\u003C\u002Fspan\u003E\r\n     \u003Cinput type=\"radio\" name=\"response\" value=\"yes\" style=\"transform: scale(1.5);\"\u003E\r\n   \u003C\u002Flabel\u003E\r\n\r\n\r\n   \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer; font-size: 2rem;\"\u003E\r\n     \u003Cspan style=\"margin-bottom: 5px;\"\u003E❌️\u003C\u002Fspan\u003E\r\n     \u003Cinput type=\"radio\" name=\"response\" value=\"no\" style=\"transform: scale(1.5);\"\u003E\r\n   \u003C\u002Flabel\u003E\r\n\r\n\r\n \u003C\u002Fdiv\u003E\r\n\r\n\r\n \u003Cdiv class=\"container\" style=\"width: 100%; display: flex; justify-content: center;\"\u003E\r\n   \u003Ch1 id=\"countdown-area\" style=\"display: none; font-size: 1.5rem; margin: 0; text-align: center; width: 100%;\"\u003E\r\n     残り\u003Cspan id=\"countdown-number\"\u003E3\u003C\u002Fspan\u003E秒です\r\n   \u003C\u002Fh1\u003E\r\n \u003C\u002Fdiv\u003E\r\n\r\n\r\n\u003C\u002Fdiv\u003E\r\n",
+                    "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 250px;\"\u003E\r\n \u003Ch3 style=\"font-size: 2.0rem; margin-bottom: 35px; text-align: center;\"\u003E\r\n   ${parameters.q_text}\r\n \u003C\u002Fh3\u003E\r\n\r\n \u003Cdiv id=\"choice-area\" style=\"display: flex; justify-content: center; gap: 120px; margin-bottom: 40px;\"\u003E\r\n  \r\n   \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer; font-size: 2rem;\"\u003E\r\n     \u003Cspan style=\"margin-bottom: 5px;\"\u003E⭕️\u003C\u002Fspan\u003E\r\n     \u003Cinput type=\"radio\" name=\"response\" value=\"yes\" style=\"transform: scale(1.5);\"\u003E\r\n   \u003C\u002Flabel\u003E\r\n\r\n   \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer; font-size: 2rem;\"\u003E\r\n     \u003Cspan style=\"margin-bottom: 5px;\"\u003E❌️\u003C\u002Fspan\u003E\r\n     \u003Cinput type=\"radio\" name=\"response\" value=\"no\" style=\"transform: scale(1.5);\"\u003E\r\n   \u003C\u002Flabel\u003E\r\n\r\n \u003C\u002Fdiv\u003E\r\n\u003C\u002Fdiv\u003E",
                     "name": ""
                   }
                 ],
@@ -2647,8 +2647,8 @@ if (transitionButton) {
             "items": [
               {
                 "type": "text",
-                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E1本目の映像について、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
-                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
+                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E\u003Cspan style=\"color: #111111; font-weight: bold;\"\u003E1本目の映像\u003C\u002Fspan\u003Eについて、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
               },
               {
                 "required": true,
@@ -2737,8 +2737,8 @@ if (transitionButton) {
             "items": [
               {
                 "type": "text",
-                "title": "2本目の映像\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E2本目の映像について、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003Eについて、\u003Cbr\u003E質問文を読んでいただき、あなたにもっとも当てはまると思う選択肢を選んで回答してください。",
-                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
+                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E\u003Cspan style=\"color: #111111; font-weight: bold;\"\u003E2本目の映像\u003C\u002Fspan\u003Eについて、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
               },
               {
                 "required": true,
@@ -2827,8 +2827,8 @@ if (transitionButton) {
             "items": [
               {
                 "type": "text",
-                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E3本目の映像について、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
-                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
+                "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E\u003Cspan style=\"color: #111111; font-weight: bold;\"\u003E3本目の映像\u003C\u002Fspan\u003Eについて、\u003Cbr\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
               },
               {
                 "required": true,
@@ -2836,11 +2836,11 @@ if (transitionButton) {
                 "label": "\u003Cdiv style=\"font-size: 1.4rem; color: #111111; font-weight: bold;\"\u003E   ${parameters.q_text} \u003C\u002Fdiv\u003E",
                 "options": [
                   {
-                    "label": "1. まったく当てはまらない",
+                    "label": "1. まったくそう思わない",
                     "coding": "1"
                   },
                   {
-                    "label": "2. あまり当てはまらない",
+                    "label": "2. あまりそう思わない",
                     "coding": "2"
                   },
                   {
@@ -2848,11 +2848,11 @@ if (transitionButton) {
                     "coding": "3"
                   },
                   {
-                    "label": "4. やや当てはまる",
+                    "label": "4. ややそう思う",
                     "coding": "4"
                   },
                   {
-                    "label": "5. 非常に当てはまる",
+                    "label": "5. 非常にそう思う",
                     "coding": "5"
                   }
                 ],
@@ -2910,7 +2910,7 @@ if (transitionButton) {
               {
                 "type": "text",
                 "title": "\u003Cspan style=\"font-size: 1rem; color: #666666; line-height: 1.5;\"\u003E以下の質問文を読んで、あなたにもっとも当てはまると思う選択肢を選んで回答してください。\u003C\u002Fspan\u003E",
-                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E"
+                "content": "\u003Cdiv style=\"font-size: 0.9rem; color: #e74c3c; font-weight: bold; margin-top: 10px; margin-bottom: 20px;\"\u003E\n  ※回答を選択し、画面下の「次へ→」ボタンを押して進んでください。\n\u003C\u002Fdiv\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
               },
               {
                 "required": true,
@@ -2918,11 +2918,11 @@ if (transitionButton) {
                 "label": "\u003Cdiv style=\"font-size: 1.4rem; color: #111111; font-weight: bold;\"\u003E   ${parameters.q_text} \u003C\u002Fdiv\u003E",
                 "options": [
                   {
-                    "label": "1. まったく当てはまらない",
+                    "label": "1. まったくそう思わない",
                     "coding": "1"
                   },
                   {
-                    "label": "2. あまり当てはまらない",
+                    "label": "2. あまりそう思わない",
                     "coding": "2"
                   },
                   {
@@ -2930,11 +2930,11 @@ if (transitionButton) {
                     "coding": "3"
                   },
                   {
-                    "label": "4. やや当てはまる",
+                    "label": "4. ややそう思う",
                     "coding": "4"
                   },
                   {
-                    "label": "5. 非常に当てはまる",
+                    "label": "5. 非常にそう思う",
                     "coding": "5"
                   }
                 ],
