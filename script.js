@@ -97,24 +97,36 @@ study.options.datastore.set('participantID', participantID);
       "type": "lab.html.Page",
       "items": [
         {
-          "type": "text",
-          "title": "\u003Cdiv style=\"text-align: center;\"\u003E\u003Cspan style=\"font-size: 30px;\"\u003Eそれでは実験を開始します。\u003C\u002Fspan\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E\u003C\u002Fdiv\u003E"
-        },
-        {
           "required": true,
-          "type": "text",
-          "content": "次のページから、３つの映像が順番に表示されます。\u003Cbr\u003E\u003Cbr\u003E\n\n映像を見ていただいた後、\u003Cb\u003E記憶テスト\u003C\u002Fb\u003Eを行います。"
+          "type": "html",
+          "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.8rem; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    それでは実験を開始します。\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.2rem; color: #555; margin-bottom: 40px; line-height: 1.6;\"\u003E\r\n    次のページから、3つの映像が順番に表示されます。\u003Cbr\u003E\r\n    映像を見ていただいた後、\u003Cstrong\u003E記憶テスト\u003C\u002Fstrong\u003Eを行います。\u003Cbr\u003E\u003Cbr\u003E\r\n    \u003Cspan style=\"font-size: 1.1rem; color: #e74c3c; font-weight: bold;\"\u003E\r\n      ※音声付きの映像が流れますので、\u003Cbr\u003E\r\n      事前にイヤホンやスピーカーなどの視聴環境をご確認ください。\r\n    \u003C\u002Fspan\u003E\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cbutton id=\"transition-button\" type=\"button\" style=\"font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #3498db; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); transition: all 0.3s ease;\"\u003E\r\n    映像の視聴を開始する →\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E",
+          "name": ""
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "映像を表示する →",
-      "submitButtonPosition": "right",
+      "submitButtonPosition": "hidden",
       "files": {},
       "responses": {
         "": ""
       },
       "parameters": {},
-      "messageHandlers": {},
+      "messageHandlers": {
+        "run": function anonymous(
+) {
+// 1. この画面（コンポーネント）を変数に格納する
+const component = this;
+
+// 2. ボタンをIDで取得する
+const transitionButton = document.getElementById("transition-button");
+
+if (transitionButton) {
+    // 3. ボタンがクリックされたら、この画面を終了して次へ進む
+    transitionButton.addEventListener("click", () => {
+        component.end();
+    });
+}
+}
+      },
       "title": "Show_Introduction"
     },
     {
@@ -209,7 +221,7 @@ if (video && nextButton) {
           "type": "lab.flow.Loop",
           "templateParameters": [
             {
-              "q_text": "第１問\u003Cbr\u003Eこの映画の主演はトム・クルーズである",
+              "q_text": "第１問\u003Cbr\u003E主演はトム・クルーズである",
               "answer": "yes"
             },
             {
@@ -217,8 +229,16 @@ if (video && nextButton) {
               "answer": "no"
             },
             {
-              "q_text": "第３問\u003Cbr\u003Eこの映画には車やヘリコプター、飛行機といった乗り物が登場するシーンがある。",
+              "q_text": "第３問\u003Cbr\u003E車やヘリコプター、飛行機といった乗り物が登場するシーンがある。",
               "answer": "yes"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003Eエッフェル塔が映るシーンがある",
+              "answer": "yes"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003E「FBIのミッション」という言葉が出てくる",
+              "answer": "no"
             }
           ],
           "sample": {
@@ -486,6 +506,14 @@ if (video && nextButton) {
             {
               "q_text": "第３問\u003Cbr\u003E飛行機に乗っているシーンがある",
               "answer": "no"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003E「風が吹いた」というワードが何度もでてくる",
+              "answer": "yes"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003E映像の中に、金髪の人物が登場する",
+              "answer": "no"
             }
           ],
           "sample": {
@@ -747,11 +775,19 @@ if (video && nextButton) {
               "answer": "yes"
             },
             {
-              "q_text": "第２問\u003Cbr\u003E主人公の仕事は漫画家である",
+              "q_text": "第２問\u003Cbr\u003E漫画家が登場する",
               "answer": "yes"
             },
             {
               "q_text": "第３問\u003Cbr\u003Eこれはロマンス映画である",
+              "answer": "no"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003E銃（ピストル）を撃つシーンがある",
+              "answer": "no"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003Eスポーツをしているシーンがある",
               "answer": "no"
             }
           ],
@@ -1026,7 +1062,7 @@ if (video && nextButton) {
           "type": "lab.flow.Loop",
           "templateParameters": [
             {
-              "q_text": "第１問\u003Cbr\u003Eこの映画の主演はトム・クルーズである",
+              "q_text": "第１問\u003Cbr\u003E主演はトム・クルーズである",
               "answer": "yes"
             },
             {
@@ -1034,8 +1070,16 @@ if (video && nextButton) {
               "answer": "no"
             },
             {
-              "q_text": "第３問\u003Cbr\u003Eこの映画には車やヘリコプター、飛行機といった乗り物が登場するシーンがある。",
+              "q_text": "第３問\u003Cbr\u003E車やヘリコプター、飛行機といった乗り物が登場するシーンがある。",
               "answer": "yes"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003Eエッフェル塔が映るシーンがある",
+              "answer": "yes"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003E「FBIのミッション」という言葉が出てくる",
+              "answer": "no"
             }
           ],
           "sample": {
@@ -1303,6 +1347,14 @@ if (video && nextButton) {
             {
               "q_text": "第３問\u003Cbr\u003E飛行機に乗っているシーンがある",
               "answer": "no"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003E「風が吹いた」というワードが何度もでてくる",
+              "answer": "yes"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003E映像の中に、金髪の人物が登場する",
+              "answer": "no"
             }
           ],
           "sample": {
@@ -1564,11 +1616,19 @@ if (video && nextButton) {
               "answer": "yes"
             },
             {
-              "q_text": "第２問\u003Cbr\u003E主人公の仕事は漫画家である",
+              "q_text": "第２問\u003Cbr\u003E漫画家が登場する",
               "answer": "yes"
             },
             {
               "q_text": "第３問\u003Cbr\u003Eこれはロマンス映画である",
+              "answer": "no"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003E銃（ピストル）を撃つシーンがある",
+              "answer": "no"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003Eスポーツをしているシーンがある",
               "answer": "no"
             }
           ],
@@ -1843,7 +1903,7 @@ if (video && nextButton) {
           "type": "lab.flow.Loop",
           "templateParameters": [
             {
-              "q_text": "第１問\u003Cbr\u003Eこの映画の主演はトム・クルーズである",
+              "q_text": "第１問\u003Cbr\u003E主演はトム・クルーズである",
               "answer": "yes"
             },
             {
@@ -1851,8 +1911,16 @@ if (video && nextButton) {
               "answer": "no"
             },
             {
-              "q_text": "第３問\u003Cbr\u003Eこの映画には車やヘリコプター、飛行機といった乗り物が登場するシーンがある。",
+              "q_text": "第３問\u003Cbr\u003E車やヘリコプター、飛行機といった乗り物が登場するシーンがある",
               "answer": "yes"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003Eエッフェル塔が映るシーンがある",
+              "answer": "yes"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003E「FBIのミッション」という言葉が出てくる",
+              "answer": "no"
             }
           ],
           "sample": {
@@ -2120,6 +2188,14 @@ if (video && nextButton) {
             {
               "q_text": "第３問\u003Cbr\u003E飛行機に乗っているシーンがある",
               "answer": "no"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003E「風が吹いた」というワードが何度もでてくる",
+              "answer": "yes"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003E映像の中に、金髪の人物が登場する",
+              "answer": "no"
             }
           ],
           "sample": {
@@ -2381,11 +2457,19 @@ if (video && nextButton) {
               "answer": "yes"
             },
             {
-              "q_text": "第２問\u003Cbr\u003E主人公の仕事は漫画家である",
+              "q_text": "第２問\u003Cbr\u003E漫画家が登場する",
               "answer": "yes"
             },
             {
               "q_text": "第３問\u003Cbr\u003Eこれはロマンス映画である",
+              "answer": "no"
+            },
+            {
+              "q_text": "第４問\u003Cbr\u003E銃（ピストル）を撃つシーンがある",
+              "answer": "no"
+            },
+            {
+              "q_text": "第５問\u003Cbr\u003Eスポーツをしているシーンがある",
               "answer": "no"
             }
           ],
@@ -2628,11 +2712,11 @@ if (transitionButton) {
             },
             {
               "q_id": "a5",
-              "q_text": "この予告編は、映像作品として非常に魅力的だった。"
+              "q_text": "この予告編は、映像作品として魅力的だった。"
             }
           ],
           "sample": {
-            "mode": "draw-shuffle"
+            "mode": "sequential"
           },
           "files": {},
           "responses": {
@@ -2718,11 +2802,11 @@ if (transitionButton) {
             },
             {
               "q_id": "b5",
-              "q_text": "この予告編は、映像作品として非常に魅力的だった。"
+              "q_text": "この予告編は、映像作品として魅力的だった。"
             }
           ],
           "sample": {
-            "mode": "draw-shuffle"
+            "mode": "sequential"
           },
           "files": {},
           "responses": {
@@ -2808,11 +2892,11 @@ if (transitionButton) {
             },
             {
               "q_id": "c5",
-              "q_text": "この予告編は、映像作品として非常に魅力的だった。"
+              "q_text": "この予告編は、映像作品として魅力的だった。"
             }
           ],
           "sample": {
-            "mode": "draw-shuffle"
+            "mode": "sequential"
           },
           "files": {},
           "responses": {
@@ -2894,7 +2978,7 @@ if (transitionButton) {
             }
           ],
           "sample": {
-            "mode": "draw-shuffle"
+            "mode": "sequential"
           },
           "files": {},
           "responses": {
@@ -3079,13 +3163,13 @@ for (let i = 1; i <= 100; i++) {
         {
           "required": true,
           "type": "html",
-          "content": "\u003Cdiv class=\"page-item\" style=\"max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: left;\"\u003E\r\n    \r\n    \u003Ch2 style=\"text-align: center; margin-bottom: 30px; font-size: 1.5rem;\"\u003E実験の真の目的について（事後説明）\u003C\u002Fh2\u003E\r\n    \r\n    \u003Cp style=\"font-size: 1.1rem; margin-bottom: 20px;\"\u003E\r\n        本日は実験にご参加いただき、誠にありがとうございました。\u003Cbr\u003E\r\n        実は、この実験では事前にお伝えしていた目的とは別に、真の目的がありました。\r\n    \u003C\u002Fp\u003E\r\n    \r\n    \u003Cp style=\"font-size: 1.1rem; margin-bottom: 20px; padding: 15px; background-color: #f9f9f9; border-left: 5px solid #555;\"\u003E\r\n        この実験の真の目的は、映像の\u003Cstrong\u003E「スペクタクル量（視覚的な迫力や刺激の多さ）の違い」\u003C\u002Fstrong\u003Eが、本編への\u003Cstrong\u003E「視聴意欲」\u003C\u002Fstrong\u003Eにどのような影響を与えるかを調査することでした。\r\n    \u003C\u002Fp\u003E\r\n\r\n    \u003Cp style=\"font-size: 1.1rem; margin-bottom: 50px;\"\u003E\r\n        事前にお伝えしていた目的は、皆さまの自然な反応や素直な評価を測定するために設けた仮のものです。ご協力いただき、深く感謝申し上げます。\r\n    \u003C\u002Fp\u003E\r\n\r\n    \u003Cp style=\"font-weight: bold; text-align: center; margin-bottom: 25px; font-size: 1.2rem;\"\u003E\r\n        上記の「真の目的（スペクタクル量と視聴意欲の関係）」について、実験中に気づいていましたか？\r\n    \u003C\u002Fp\u003E\r\n\r\n    \u003Cdiv style=\"display: flex; justify-content: center; gap: 80px; margin-bottom: 20px;\"\u003E\r\n        \r\n        \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer;\"\u003E\r\n            \u003Cinput type=\"radio\" name=\"noticed_purpose\" value=\"yes\" required style=\"transform: scale(1.5); margin-bottom: 12px; cursor: pointer;\"\u003E\r\n            \u003Cspan style=\"font-size: 1.2rem; font-weight: bold;text-align: center;\"\u003Eはい\u003Cbr\u003E（気づいていた）\u003C\u002Fspan\u003E\r\n        \u003C\u002Flabel\u003E\r\n\r\n        \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer;\"\u003E\r\n            \u003Cinput type=\"radio\" name=\"noticed_purpose\" value=\"no\" style=\"transform: scale(1.5); margin-bottom: 12px; cursor: pointer;\"\u003E\r\n            \u003Cspan style=\"font-size: 1.2rem; font-weight: bold;text-align: center;\"\u003Eいいえ\u003Cbr\u003E（気づかなかった）\u003C\u002Fspan\u003E\r\n        \u003C\u002Flabel\u003E\r\n\r\n    \u003C\u002Fdiv\u003E\r\n\u003C\u002Fdiv\u003E",
+          "content": "\u003Cdiv class=\"page-item\" style=\"max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: left;\"\u003E\r\n    \r\n    \u003Ch2 style=\"text-align: center; margin-bottom: 30px; font-size: 1.5rem; color: #2c3e50;\"\u003E実験の真の目的について（事後説明）\u003C\u002Fh2\u003E\r\n    \r\n    \u003Cp style=\"font-size: 1.1rem; margin-bottom: 20px;\"\u003E\r\n        本日は実験にご参加いただき、誠にありがとうございました。\u003Cbr\u003E\r\n        実は、この実験では事前にお伝えしていた目的とは別に、真の目的がありました。\r\n    \u003C\u002Fp\u003E\r\n    \r\n    \u003Cp style=\"font-size: 1.1rem; margin-bottom: 20px; padding: 15px; background-color: #f9f9f9; border-left: 5px solid #555;\"\u003E\r\n        この実験の真の目的は、映像の\u003Cstrong\u003E「スペクタクル量（視覚的な迫力や刺激の多さ）の違い」\u003C\u002Fstrong\u003Eが、本編への\u003Cstrong\u003E「視聴意欲」\u003C\u002Fstrong\u003Eにどのような影響を与えるかを調査することでした。\r\n    \u003C\u002Fp\u003E\r\n    \r\n    \u003Cdiv style=\"background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #e9ecef;\"\u003E\r\n        \u003Ch3 style=\"font-size: 1.1rem; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #3498db; padding-bottom: 5px;\"\u003E\r\n            実験の条件（グループ分け）について\r\n        \u003C\u002Fh3\u003E\r\n        \u003Cp style=\"font-size: 1rem; color: #333; line-height: 1.6; margin-bottom: 0;\"\u003E\r\n            この実験では、参加者の皆様をコンピュータがランダムに以下の\u003Cstrong\u003E3つのグループ\u003C\u002Fstrong\u003Eのいずれかに割り当てていました。\u003Cbr\u003E\u003Cbr\u003E\r\n            ・ \u003Cstrong\u003E条件A：スペクタクル要素をカットした予告編\u003C\u002Fstrong\u003E\u003Cbr\u003E\r\n            ・ \u003Cstrong\u003E条件B：スペクタクル要素が少し含まれる予告編\u003C\u002Fstrong\u003E\u003Cbr\u003E\r\n            ・ \u003Cstrong\u003E条件C：スペクタクル要素が非常に多い予告編\u003C\u002Fstrong\u003E\u003Cbr\u003E\u003Cbr\u003E\r\n            あなたは、この3つのうちのいずれか1つの条件に割り当てられ、その条件に応じた映像を視聴していただきました。\r\n        \u003C\u002Fp\u003E\r\n    \u003C\u002Fdiv\u003E\r\n\r\n\r\n    \u003Cp style=\"font-size: 1.1rem; margin-bottom: 50px;\"\u003E\r\n        事前にお伝えしていた目的は、皆さまの自然な反応や素直な評価を測定するために設けた仮のものです。ご協力いただき、深く感謝申し上げます。\r\n    \u003C\u002Fp\u003E\r\n\r\n    \u003Cp style=\"font-weight: bold; text-align: center; margin-bottom: 25px; font-size: 1.2rem;\"\u003E\r\n        上記の「真の目的（スペクタクル量と視聴意欲の関係）」について、実験中に気づいていましたか？\r\n    \u003C\u002Fp\u003E\r\n\r\n    \u003Cdiv style=\"display: flex; justify-content: center; gap: 80px; margin-bottom: 40px;\"\u003E\r\n        \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer;\"\u003E\r\n            \u003Cinput type=\"radio\" name=\"noticed_purpose\" value=\"yes\" required style=\"transform: scale(1.5); margin-bottom: 12px; cursor: pointer;\"\u003E\r\n            \u003Cspan style=\"font-size: 1.2rem; font-weight: bold; text-align: center;\"\u003Eはい\u003Cbr\u003E（気づいていた）\u003C\u002Fspan\u003E\r\n        \u003C\u002Flabel\u003E\r\n\r\n        \u003Clabel style=\"display: flex; flex-direction: column; align-items: center; cursor: pointer;\"\u003E\r\n            \u003Cinput type=\"radio\" name=\"noticed_purpose\" value=\"no\" style=\"transform: scale(1.5); margin-bottom: 12px; cursor: pointer;\"\u003E\r\n            \u003Cspan style=\"font-size: 1.2rem; font-weight: bold; text-align: center;\"\u003Eいいえ\u003Cbr\u003E（気づかなかった）\u003C\u002Fspan\u003E\r\n        \u003C\u002Flabel\u003E\r\n    \u003C\u002Fdiv\u003E\r\n\r\n    \u003C!-- 次へ進むための標準ボタン --\u003E\r\n    \u003Cdiv style=\"text-align: center;\"\u003E\r\n        \u003Cbutton type=\"submit\" style=\"font-size: 1.1rem; padding: 12px 40px; border-radius: 5px; background-color: #eee; border: 1px solid #ccc; cursor: pointer;\"\u003E\r\n            次へ進む\r\n        \u003C\u002Fbutton\u003E\r\n    \u003C\u002Fdiv\u003E\r\n\r\n\u003C\u002Fdiv\u003E",
           "name": ""
         }
       ],
       "scrollTop": true,
       "submitButtonText": "次へ →",
-      "submitButtonPosition": "right",
+      "submitButtonPosition": "hidden",
       "files": {},
       "responses": {
         "": ""
@@ -3093,6 +3177,46 @@ for (let i = 1; i <= 100; i++) {
       "parameters": {},
       "messageHandlers": {},
       "title": "Debriefing"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "required": true,
+          "type": "html",
+          "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.5rem; color: #2c3e50; margin-bottom: 30px;\"\u003E\r\n    データ利用に関する再同意のお願い\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.1rem; color: #333; margin-bottom: 40px; line-height: 1.8;\"\u003E\r\n    実験の真の目的をご理解いただいた上で、\u003Cbr\u003E\r\n    ご自身の回答データを\u003Cstrong\u003E研究に使用することに同意\u003C\u002Fstrong\u003Eいただけますか？\u003Cbr\u003E\r\n    \u003Cspan style=\"font-size: 1rem; color: #e74c3c; display: block; margin-top: 15px;\"\u003E※同意されない場合、データは破棄され、不利益を被ることは一切ありません。\u003C\u002Fspan\u003E\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cdiv style=\"display: flex; gap: 40px; justify-content: center; width: 100%;\"\u003E\r\n    \u003C!-- 同意するボタン --\u003E\r\n    \u003Cbutton id=\"consent-yes\" type=\"button\" style=\"font-size: 1.1rem; padding: 12px 40px; border-radius: 5px; background-color: #eee; border: 1px solid #ccc; cursor: pointer; color: #333;\"\u003E\r\n      同意する\r\n    \u003C\u002Fbutton\u003E\r\n    \r\n    \u003C!-- 同意しないボタン --\u003E\r\n    \u003Cbutton id=\"consent-no\" type=\"button\" style=\"font-size: 1.1rem; padding: 12px 40px; border-radius: 5px; background-color: #fff; border: 1px solid #ccc; cursor: pointer; color: #333;\"\u003E\r\n      同意しない\r\n    \u003C\u002Fbutton\u003E\r\n  \u003C\u002Fdiv\u003E\r\n\r\n\u003C\u002Fdiv\u003E",
+          "name": ""
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "run": function anonymous(
+) {
+const component = this;
+const btnYes = document.getElementById("consent-yes");
+const btnNo = document.getElementById("consent-no");
+
+if (btnYes && btnNo) {
+    btnYes.addEventListener("click", () => {
+        component.data.final_consent = "yes";
+        component.end();
+    });
+
+    btnNo.addEventListener("click", () => {
+        component.data.final_consent = "no";
+        component.end();
+    });
+}
+}
+      },
+      "title": "final_consent"
     },
     {
       "type": "lab.html.Page",
