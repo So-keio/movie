@@ -67,7 +67,7 @@ study.options.datastore.set('participantID', participantID);
         {
           "type": "text",
           "title": "\u003Cspan style=\"font-size: 30px;\"\u003E\u003Cdiv style=\"text-align: center;\"\u003E実験参加への同意確認\u003C\u002Fdiv\u003E\u003C\u002Fspan\u003E",
-          "content": "\u003Cb\u003E1. 目的\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験は、映像についての記憶を調べるためのものです。\u003Cbr\u003E\n\u003Cb\u003E2. 所要時間\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験はおおよそ10分かかります。\u003Cbr\u003E\n\u003Cb\u003E3. リスク\u003C\u002Fb\u003E\u003Cbr\u003E緊張したり、疲労を感じる可能性があります。\u003Cbr\u003E\n\u003Cb\u003E4. リスクへの対策\u003C\u002Fb\u003E\u003Cbr\u003E体調がわるくなった場合には、参加を取りやめてください。\u003Cbr\u003E\n\u003Cb\u003E5. 謝礼\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験への参加に対する謝金の支払いはありません。\u003Cbr\u003E\n\u003Cb\u003E6. 個人情報\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験では、個人を特定できる情報は一切収集しません。\u003Cbr\u003E\n\u003Cb\u003E7. データの利用\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、学術的な目的にのみ利用します。\u003Cbr\u003E\n\u003Cb\u003E8. データの廃棄\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、10年後に廃棄します。\u003Cbr\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
+          "content": "\u003Cb\u003E1. 目的\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験は、映像についての記憶を調べるためのものです。\u003Cbr\u003E\n\u003Cb\u003E2. 所要時間\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験はおおよそ10分かかります。\u003Cbr\u003E\n\u003Cb\u003E3. リスク\u003C\u002Fb\u003E\u003Cbr\u003E緊張したり、疲労を感じる可能性があります。\u003Cbr\u003E\n\u003Cb\u003E4. リスクへの対策\u003C\u002Fb\u003E\u003Cbr\u003E体調がわるくなった場合には、参加を取りやめてください。\u003Cbr\u003E\n\u003Cb\u003E5. 謝礼\u003C\u002Fb\u003E\u003Cbr\u003E本実験にご協力いただいた方には、謝金として200円をお支払いいたします。\u003Cbr\u003E\n\u003Cb\u003E6. 個人情報\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験では、個人を特定できる情報は一切収集しません。\u003Cbr\u003E\n\u003Cb\u003E7. データの利用\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、学術的な目的にのみ利用します。\u003Cbr\u003E\n\u003Cb\u003E8. データの廃棄\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、10年後に廃棄します。\u003Cbr\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
         },
         {
           "required": true,
@@ -2752,7 +2752,7 @@ if (transitionButton) {
                     "coding": "3"
                   },
                   {
-                    "label": "4. ややそう思う",
+                    "label": "4. 少しそう思う",
                     "coding": "4"
                   },
                   {
@@ -2842,7 +2842,7 @@ if (transitionButton) {
                     "coding": "3"
                   },
                   {
-                    "label": "4. ややそう思う",
+                    "label": "4. 少しそう思う",
                     "coding": "4"
                   },
                   {
@@ -2932,7 +2932,7 @@ if (transitionButton) {
                     "coding": "3"
                   },
                   {
-                    "label": "4. ややそう思う",
+                    "label": "4. 少しそう思う",
                     "coding": "4"
                   },
                   {
@@ -3014,7 +3014,7 @@ if (transitionButton) {
                     "coding": "3"
                   },
                   {
-                    "label": "4. ややそう思う",
+                    "label": "4. 少しそう思う",
                     "coding": "4"
                   },
                   {
