@@ -67,7 +67,7 @@ study.options.datastore.set('participantID', participantID);
         {
           "type": "text",
           "title": "\u003Cspan style=\"font-size: 30px;\"\u003E\u003Cdiv style=\"text-align: center;\"\u003E実験参加への同意確認\u003C\u002Fdiv\u003E\u003C\u002Fspan\u003E",
-          "content": "\u003Cb\u003E1. 目的\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験は、映像についての記憶を調べるためのものです。\u003Cbr\u003E\n\u003Cb\u003E2. 所要時間\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験はおおよそ10分かかります。\u003Cbr\u003E\n\u003Cb\u003E3. リスク\u003C\u002Fb\u003E\u003Cbr\u003E緊張したり、疲労を感じる可能性があります。\u003Cbr\u003E\n\u003Cb\u003E4. リスクへの対策\u003C\u002Fb\u003E\u003Cbr\u003E体調がわるくなった場合には、参加を取りやめてください。\u003Cbr\u003E\n\u003Cb\u003E5. 謝礼\u003C\u002Fb\u003E\u003Cbr\u003E本実験にご協力いただいた方には、謝金として200円をお支払いいたします。\u003Cbr\u003E\n\u003Cb\u003E6. 個人情報\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験では、個人を特定できる情報は一切収集しません。\u003Cbr\u003E\n\u003Cb\u003E7. データの利用\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、学術的な目的にのみ利用します。\u003Cbr\u003E\n\u003Cb\u003E8. データの廃棄\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、10年後に廃棄します。\u003Cbr\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
+          "content": "\u003Cb\u003E1. 目的\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験は、映像についての記憶を調べるためのものです。\u003Cbr\u003E\n\u003Cb\u003E2. 所要時間\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験はおおよそ10分かかります。\u003Cbr\u003E\n\u003Cb\u003E3. リスク\u003C\u002Fb\u003E\u003Cbr\u003E緊張したり、疲労を感じる可能性があります。\u003Cbr\u003E\n\u003Cb\u003E4. リスクへの対策\u003C\u002Fb\u003E\u003Cbr\u003E体調がわるくなった場合には、参加を取りやめてください。\u003Cbr\u003E\n\u003Cb\u003E5. 謝礼\u003C\u002Fb\u003E\u003Cbr\u003E本実験に最後までご協力いただいた方には、謝金として100円（Amazon e-Gift）をお支払いいたします。\u003Cbr\u003E\n\u003Cb\u003E6. 個人情報\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験では、個人を特定できる情報は一切収集しません。\u003Cbr\u003E\n\u003Cb\u003E7. データの利用\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、学術的な目的にのみ利用します。\u003Cbr\u003E\n\u003Cb\u003E8. データの廃棄\u003C\u002Fb\u003E\u003Cbr\u003Eこの実験で得られたデータは、10年後に廃棄します。\u003Cbr\u003E\u003Chr style=\"border: none; border-top: 1px solid #cccccc; margin: 30px 0;\"\u003E"
         },
         {
           "required": true,
@@ -3217,6 +3217,37 @@ if (btnYes && btnNo) {
 }
       },
       "title": "final_consent"
+    },
+    {
+      "type": "lab.html.Screen",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "run": function anonymous(
+) {
+const component = this;
+const form = document.getElementById("email-form");
+const emailInput = document.getElementById("email-input");
+
+if (form) {
+    form.addEventListener("submit", (event) => {
+        // 1. ブラウザの標準機能（ページリロード）をブロックする
+        event.preventDefault();
+
+        // 2. 入力されたメールアドレスをデータとして記録する
+        component.data.reward_email = emailInput.value;
+
+        // 3. 次のページ（終了画面）へ進む
+        component.end();
+    });
+}
+}
+      },
+      "title": "Email",
+      "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.5rem; color: #2c3e50; margin-bottom: 30px;\"\u003E\r\n    謝礼送付先メールアドレスのご入力\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.1rem; color: #333; margin-bottom: 30px; line-height: 1.8;\"\u003E\r\n    本実験にご協力いただき、誠にありがとうございました。\u003Cbr\u003E\r\n    謝礼の\u003Cstrong\u003E「Amazon e-Gift（100円分）」を送付するため\u003C\u002Fstrong\u003Eに、\u003Cbr\u003Eメールアドレスをご入力ください。\u003Cbr\u003E\r\n    \u003Cspan style=\"font-size: 1rem; color: #e74c3c; display: block; margin-top: 15px;\"\u003E※ご入力いただいたメールアドレスは、\u003Cbr\u003E謝礼の送付目的以外には一切使用いたしません。\u003C\u002Fspan\u003E\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cform id=\"email-form\" style=\"width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 20px; margin: 0 auto;\"\u003E\r\n    \r\n    \u003Cinput type=\"email\" id=\"email-input\" name=\"reward_email\" placeholder=\"例：keio@example.com\" required style=\"font-size: 1.1rem; padding: 12px; border: 1px solid #ccc; border-radius: 5px; width: 100%; box-sizing: border-box;\"\u003E\r\n    \r\n    \u003Cbutton type=\"submit\" style=\"font-size: 1.1rem; padding: 12px 40px; border-radius: 5px; background-color: #eee; border: 1px solid #ccc; cursor: pointer; color: #333; width: 100%;\"\u003E\r\n      送信して実験を終了する\r\n    \u003C\u002Fbutton\u003E\r\n    \r\n  \u003C\u002Fform\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
     },
     {
       "type": "lab.html.Page",
