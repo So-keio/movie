@@ -409,7 +409,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -686,7 +690,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -963,7 +971,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -1256,7 +1268,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -1533,7 +1549,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -1810,7 +1830,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -2103,7 +2127,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -2380,7 +2408,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
@@ -2657,7 +2689,11 @@ setTimeout(() => {
 const options = document.querySelectorAll('input[type="radio"]');
 
 options.forEach(option => {
-    option.addEventListener('change', () => {
+    option.addEventListener('change', (event) => { // ← (event) が必要です
+        
+        // 【重要】画面が切り替わる前に、回答をデータとして保存する！
+        this.data[event.target.name] = event.target.value;
+
         // 選んだことが視覚的に分かるように、ほんの少し（300ミリ秒）だけ待ってから進む
         setTimeout(() => {
             this.end();
