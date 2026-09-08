@@ -214,7 +214,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_A",
+          "title": "Video_A1",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fyuuuuuuuuuuuuuuuuuuki.github.io\u002Fmission3\u002Fmission3.mp4\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -383,13 +383,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_A"
             }
           ],
           "scrollTop": true,
@@ -444,7 +446,7 @@ if (transitionButton) {
 }
 }
           },
-          "title": "Transition",
+          "title": "TransitionAtoB",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.8rem; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    記憶テスト、お疲れ様でした。\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.2rem; color: #555; margin-bottom: 40px; line-height: 1.6;\"\u003E\r\n    続いて、次の映像に進みます。\u003Cbr\u003E\r\n    準備ができましたら、下のボタンを押してください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cbutton id=\"transition-button\" type=\"button\" style=\"font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #3498db; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); transition: all 0.3s ease;\"\u003E\r\n    次の映像へ進む →\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -489,7 +491,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_B",
+          "title": "Video_B1",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fkamemushi10.github.io\u002Fpieceofcake2\u002Fpieceofcake(nomal).mp4\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -658,13 +660,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_B"
             }
           ],
           "scrollTop": true,
@@ -719,7 +723,7 @@ if (transitionButton) {
 }
 }
           },
-          "title": "Transition",
+          "title": "TransitionBtoC",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.8rem; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    記憶テスト、お疲れ様でした。\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.2rem; color: #555; margin-bottom: 40px; line-height: 1.6;\"\u003E\r\n    続いて、次の映像に進みます。\u003Cbr\u003E\r\n    準備ができましたら、下のボタンを押してください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cbutton id=\"transition-button\" type=\"button\" style=\"font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #3498db; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); transition: all 0.3s ease;\"\u003E\r\n    次の映像へ進む →\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -764,7 +768,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_C",
+          "title": "Video_C1",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fizemi-web.github.io\u002FKageki-nothingdayo\u002Fkageki-nothing.MOV\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -933,13 +937,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_C"
             }
           ],
           "scrollTop": true,
@@ -1055,7 +1061,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_A'",
+          "title": "Video_A2",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fyuuuuuuuuuuuuuuuuuuki.github.io\u002Fmission2\u002Fmission2.mp4\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -1224,13 +1230,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_A"
             }
           ],
           "scrollTop": true,
@@ -1285,7 +1293,7 @@ if (transitionButton) {
 }
 }
           },
-          "title": "Transition",
+          "title": "TransitionAtoB",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.8rem; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    記憶テスト、お疲れ様でした。\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.2rem; color: #555; margin-bottom: 40px; line-height: 1.6;\"\u003E\r\n    続いて、次の映像に進みます。\u003Cbr\u003E\r\n    準備ができましたら、下のボタンを押してください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cbutton id=\"transition-button\" type=\"button\" style=\"font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #3498db; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); transition: all 0.3s ease;\"\u003E\r\n    次の映像へ進む →\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -1330,7 +1338,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_B'",
+          "title": "Video_B2",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fkamemushi10.github.io\u002Fpieceofcake3\u002Fpieceofccake.mp4\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -1499,13 +1507,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_B"
             }
           ],
           "scrollTop": true,
@@ -1560,7 +1570,7 @@ if (transitionButton) {
 }
 }
           },
-          "title": "Transition",
+          "title": "TransitionBtoC",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.8rem; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    記憶テスト、お疲れ様でした。\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.2rem; color: #555; margin-bottom: 40px; line-height: 1.6;\"\u003E\r\n    続いて、次の映像に進みます。\u003Cbr\u003E\r\n    準備ができましたら、下のボタンを押してください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cbutton id=\"transition-button\" type=\"button\" style=\"font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #3498db; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); transition: all 0.3s ease;\"\u003E\r\n    次の映像へ進む →\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -1605,7 +1615,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_C'",
+          "title": "Video_C2",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fizemi-web.github.io\u002Fkageki-tyoxtuto\u002Fkageki-tyoxtuto.MOV\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -1774,13 +1784,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_C"
             }
           ],
           "scrollTop": true,
@@ -1896,7 +1908,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_A\"",
+          "title": "Video_A3",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fyuuuuuuuuuuuuuuuuuuki.github.io\u002Fmission1\u002Fmission1.mp4\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -2065,13 +2077,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_A"
             }
           ],
           "scrollTop": true,
@@ -2126,7 +2140,7 @@ if (transitionButton) {
 }
 }
           },
-          "title": "Transition",
+          "title": "TransitionAtoB",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.8rem; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    記憶テスト、お疲れ様でした。\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.2rem; color: #555; margin-bottom: 40px; line-height: 1.6;\"\u003E\r\n    続いて、次の映像に進みます。\u003Cbr\u003E\r\n    準備ができましたら、下のボタンを押してください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cbutton id=\"transition-button\" type=\"button\" style=\"font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #3498db; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); transition: all 0.3s ease;\"\u003E\r\n    次の映像へ進む →\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -2171,7 +2185,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_B\"",
+          "title": "Video_B3",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fkamemushi10.github.io\u002Fpieceofcake1\u002Fpieceofcake(max).mp4\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -2340,13 +2354,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_B"
             }
           ],
           "scrollTop": true,
@@ -2401,7 +2417,7 @@ if (transitionButton) {
 }
 }
           },
-          "title": "Transition",
+          "title": "TransitionBtoC",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 60vh; text-align: center;\"\u003E\r\n\r\n  \u003Ch2 style=\"font-size: 1.8rem; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    記憶テスト、お疲れ様でした。\r\n  \u003C\u002Fh2\u003E\r\n\r\n  \u003Cp style=\"font-size: 1.2rem; color: #555; margin-bottom: 40px; line-height: 1.6;\"\u003E\r\n    続いて、次の映像に進みます。\u003Cbr\u003E\r\n    準備ができましたら、下のボタンを押してください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003Cbutton id=\"transition-button\" type=\"button\" style=\"font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #3498db; color: white; cursor: pointer; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); transition: all 0.3s ease;\"\u003E\r\n    次の映像へ進む →\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -2446,7 +2462,7 @@ if (video && nextButton) {
 }
 }
           },
-          "title": "Video_C\"",
+          "title": "Video_C3",
           "content": "\u003Cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding-top: 20px;\"\u003E\r\n\r\n  \u003C!-- 案内文 --\u003E\r\n  \u003Cp style=\"font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;\"\u003E\r\n    再生ボタン（▶）を押して、映像を最後までご視聴ください。\r\n  \u003C\u002Fp\u003E\r\n\r\n  \u003C!-- ビデオプレイヤー（角丸と影をつけてスタイリッシュに） --\u003E\r\n  \u003Cvideo id=\"video-player\" controls playsinline style=\"max-width: 100%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\"\u003E\r\n    \u003C!-- 💡 下の src=\"\" の中に、映像のURLを入れてください --\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fizemi-web.github.io\u002FKageki-max\u002Fkageki-max.MOV\" type=\"video\u002Fmp4\"\u003E\r\n    お使いのブラウザは動画再生に対応していません。\r\n  \u003C\u002Fvideo\u003E\r\n\r\n  \u003C!-- 次へ進むボタン（最初はグレーで押せない状態） --\u003E\r\n  \u003Cbutton id=\"next-button\" type=\"button\" disabled style=\"margin-top: 35px; font-size: 1.2rem; font-weight: bold; padding: 15px 40px; border: none; border-radius: 30px; background-color: #cccccc; color: #666666; cursor: not-allowed; transition: all 0.3s ease;\"\u003E\r\n    映像の終了までお待ちください...\r\n  \u003C\u002Fbutton\u003E\r\n\r\n\u003C\u002Fdiv\u003E"
         },
         {
@@ -2615,13 +2631,15 @@ setTimeout(() => {
               "label": "この映像は映画の予告編でした。\u003Cbr\u003E実際にこの映画の本編を視聴したことがありますか？",
               "options": [
                 {
-                  "label": "はい"
+                  "label": "はい",
+                  "coding": "yes"
                 },
                 {
-                  "label": "いいえ"
+                  "label": "いいえ",
+                  "coding": "no"
                 }
               ],
-              "name": "lessbrgreater"
+              "name": "seen_C"
             }
           ],
           "scrollTop": true,
@@ -3022,7 +3040,7 @@ if (transitionButton) {
                     "coding": "5"
                   }
                 ],
-                "name": "lessdiv-style\"font-size:-1.4rem-color:-111111-font-weight:-bold\"greater-dollarparameters.q_text-lessdivgreater"
+                "name": "${parameters.q_id}"
               }
             ],
             "scrollTop": true,
